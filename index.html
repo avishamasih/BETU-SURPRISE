@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Betu 🤍</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:Poppins,sans-serif;color:#fff;overflow-x:hidden;}
+
+/* SECTIONS */
+section{min-height:100vh;padding:50px 20px 100px;display:none;position:relative;overflow:hidden;transition:opacity 0.8s;}
+section.active{display:block;opacity:1;}
+h1{text-align:center;margin-bottom:20px;font-size:28px;position:relative;z-index:2;}
+p{font-size:16px;line-height:2;position:relative;z-index:2;margin-bottom:16px;}
+.short-note{font-size:14px;color:#ffb6c1;text-align:center;margin-top:10px;position:relative;z-index:2;}
+.next-btn{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);padding:12px 28px;border-radius:30px;border:none;background:#ff6f91;color:#fff;font-size:16px;cursor:pointer;z-index:10;}
+
+/* BACKGROUND EMOJI RAIN */
+.bg-emoji{position:absolute;inset:0;z-index:1;pointer-events:none;}
+.bg-emoji span{position:absolute;font-size:22px;opacity:.35;animation-iteration-count:infinite;}
+@keyframes rainDown{0%{top:-10%;}100%{top:110%;}}
+@keyframes rainUp{0%{top:110%;}100%{top:-10%;}}
+@keyframes rainTLBR{0%{top:-10%;left:-10%;}100%{top:110%;left:110%;}}
+@keyframes rainTRBL{0%{top:-10%;right:-10%;}100%{top:110%;right:110%;}}
+
+/* WHITE STARS */
+.bg-stars{position:absolute;inset:0;z-index:0;pointer-events:none;}
+.bg-stars span{position:absolute;color:#fff;font-size:4px;opacity:.15;animation:twinkle 8s linear infinite;}
+@keyframes twinkle{0%,100%{opacity:.15;}50%{opacity:.35;}}
+
+/* WHITE GLITTERY SHINE */
+.bg-glitter{position:absolute;inset:0;z-index:1;pointer-events:none;}
+.bg-glitter span{position:absolute;background:white;border-radius:50%;opacity:0.1;animation:glitter 5s linear infinite;}
+@keyframes glitter{0%,100%{opacity:0.1;}50%{opacity:0.4;}}
+
+/* PAGE COLORS */
+.s1{background:#1a1a2e}
+.s2{background:#16213e}
+.s3{background:#0f3460}
+.s4{background:#231942}
+.s5{background:#3a0f2e}
+.s6{background:#1b263b}
+.s7{background:#2b2d42}
+.s8{background:#432818}
+.s9{background:#2a1a1f}
+.s10{background:#1f2933}
+.s11{background:#2c2c54}
+.s12{background:#140005}
+
+/* HEART ANIMATION */
+.heart{position:absolute;font-size:40px;animation:floatHeart 4s linear forwards;pointer-events:none;}
+@keyframes floatHeart{0%{transform:translateY(0) scale(0.5);opacity:0.7;}50%{opacity:1;scale:1;}100%{transform:translateY(-300px) scale(1.2);opacity:0;}}
+
+/* START OVERLAY */
+#start-overlay{position:fixed;inset:0;background:#000;display:flex;justify-content:center;align-items:center;flex-direction:column;z-index:50;cursor:pointer;}
+#start-overlay h1{font-size:28px;margin-bottom:20px;text-align:center;color:#ff6f91;}
+#start-overlay .btn-group button{margin:10px;padding:12px 28px;border:none;border-radius:30px;font-size:16px;cursor:pointer;}
+#start-overlay .yes{background:#ff6f91;color:#fff;}
+#start-overlay .no{background:#ccc;color:#000;}
+</style>
+</head>
+<body>
+
+<!-- BACKGROUND STARS + GLITTER -->
+<div class="bg-stars">
+<script>
+for(let i=0;i<50;i++){
+    document.write('<span style="top:'+Math.random()*100+'%;left:'+Math.random()*100+'%;"></span>');
+}
+</script>
+</div>
+<div class="bg-glitter">
+<script>
+for(let i=0;i<80;i++){
+    document.write('<span style="width:'+(2+Math.random()*4)+'px;height:'+(2+Math.random()*4)+'px;top:'+Math.random()*100+'%;left:'+Math.random()*100+'%;animation-duration:'+(4+Math.random()*6)+'s;"></span>');
+}
+</script>
+</div>
+
+<audio id="bg-music" src="audio1.mp3" loop></audio>
+
+<!-- START OVERLAY WITH ROMANTIC QUESTION -->
+<div id="start-overlay">
+  <h1>Kya aap mere dil ki baatein padhna chahenge? 💖</h1>
+  <div class="btn-group">
+    <button class="yes">Yes</button>
+    <button class="no">No</button>
+  </div>
+</div>
+
+<!-- SECTIONS s1-s12 -->
+<section class="s1"><div class="bg-emoji" id="emoji-s1"></div>
+<h1>Welcome 🧸✨</h1>
+<p>Betu, jab aap ye padh rahe ho na, to shayad aapko idea bhi nahi hoga ki ye sab likhne me main kitni baar ruki hu, sochi hu, phir likha hai. Ye website bas ek surprise nahi hai, ye meri taraf se ek chhoti si duniya hai jisme sirf aap aur main exist karte hu. 💖</p>
+<div class="short-note">Ye ek chhoti si duniya sirf hamari 💖</div></section>
+
+<section class="s2"><div class="bg-emoji" id="emoji-s2"></div>
+<h1>Why This Website 💌</h1>
+<p>Maine ye website isliye nahi banayi kyunki Teddy Day tha ya koi special date thi. Ye website wahi jagah hai jahan meri feelings safe hain aur main unhe share kar sakti hu. Ye sirf past ka nahi, future ka bhi ek chhota sa promise hai jo main aapse chupke se kar rahi hu. 🤍</p>
+<div class="short-note">Ye promise future ka bhi hai 🤍</div></section>
+
+<section class="s3"><div class="bg-emoji" id="emoji-s3"></div>
+<h1>About You 🧸🌼</h1>
+<p>Baccha, aap jaise loyal aur understanding log bahut kam milte hain. Main gussa karti hu, block bhi kar deti hu, par aap phir bhi wahi rehte ho. Ye connection rare hai, aur main isko lightly nahi leti. ✨</p>
+<div class="short-note">Aapki loyalty sabse special 🌟</div></section>
+
+<section class="s4"><div class="bg-emoji" id="emoji-s4"></div>
+<h1>Your Loyalty 🌙🤍</h1>
+<p>Aapki loyalty sirf ek word nahi, ye actions hai jo aap silently karte ho. Jab main door ho jaati hu, tab bhi aap manate ho, rukte ho, intezaar karte ho. Aapka rehna hi kaafi hai. 🌌</p>
+<div class="short-note">Aapke rehne se sab complete hai 🤍</div></section>
+
+<section class="s5"><div class="bg-emoji" id="emoji-s5"></div>
+<h1>Gussa, Doori, Manana 🌑💔</h1>
+<p>Main jaanti hu main easy nahi hu. Main gussa karti hu, main bolti hu ki farq nahi padta, par sach ye hai ki sabse zyada farq aapka hi padta hai. Jab main door hoti hu, tab bhi aap mere dil me ho. 😔</p>
+<div class="short-note">Doori me bhi aap mere paas ho 💖</div></section>
+
+<section class="s6"><div class="bg-emoji" id="emoji-s6"></div>
+<h1>Your Emotional Side 🌧️🤍</h1>
+<p>Mujhe aapka wo side sabse zyada pyaara lagta hai jahan aap strong dikhne ki koshish nahi karte. Jab aap khush hote ho aur phir bhi emotional ho jaate ho, mujhe lagta hai aap bahut pure ho. 🌫️</p>
+<div class="short-note">Aapki emotions sabse pyari 💖</div></section>
+
+<section class="s7"><div class="bg-emoji" id="emoji-s7"></div>
+<h1>Conversations ✍️💭</h1>
+<p>Hamari baatein kabhi script ke hisaab se nahi hoti. Kabhi random hasi, kabhi bina wajah ka silence, kabhi ek line jo poora din bana de. Aap mujhe samajhte ho bina kuch kahe. 💬✨</p>
+<div class="short-note">Har baat me connection 💖</div></section>
+
+<section class="s8"><div class="bg-emoji" id="emoji-s8"></div>
+<h1>Piyu’s Confession 💖🕊️</h1>
+<p>Main aapse pyaar perfect tareeke se nahi karti, par honestly karti hu. Main dramatic hu, sensitive hu, par meri care kabhi fake nahi hoti. — Aapki Piyu 🤍</p>
+<div class="short-note">Meri care hamesha real 💖</div></section>
+
+<section class="s9"><div class="bg-emoji" id="emoji-s9"></div>
+<h1>Future Imagination 🌠🌙</h1>
+<p>Abhi shadi nahi hui hai, par main sapne naturally banati hu jisme aap saath ho. Saath chalna, seekhna, grow karna — bina pressure ke. 🛤️✨</p>
+<div class="short-note">Future me saath 💖</div></section>
+
+<section class="s10"><div class="bg-emoji" id="emoji-s10"></div>
+<h1>Promises 🤝📜</h1>
+<p>Main promise karti hu main har baar sahi nahi hongi, par main honest rahungi. Main gussa karungi, par aapse door nahi jaungi. Problems se ladhenge, ek dusre se nahi. 🤍</p>
+<div class="short-note">Honest aur practical promises 💖</div></section>
+
+<section class="s11"><div class="bg-emoji" id="emoji-s11"></div>
+<h1>Almost End 🎀🌫️</h1>
+<p>Agar aap yahan tak aaye ho, to ye website sirf cute cheezon ka collection nahi hai. Ye meri feelings ka safe space hai jahan maine kuch bhi chhupaya nahi. ✨</p>
+<div class="short-note">Safe space for us 💖</div></section>
+
+<section class="s12"><div class="bg-emoji" id="emoji-s12"></div>
+<h1>Gift Message 🎁🧸</h1>
+<p>Betu, ye teddy sirf ek soft toy nahi hai. Ye meri taraf se wo hug hai jo main physically nahi de paati. Jab bhi aap thak jao, ya lage koi samajh nahi raha, bas is teddy ko dekh lena. — Aapki Piyu 💖</p>
+<div class="short-note">Digital hug 💖</div>
+<img src="teddy.png" alt="Teddy Image" style="display:block;margin:20px auto;width:250px;">
+</section>
+
+<button class="next-btn">Next 🤍</button>
+
+<script>
+const audio=document.getElementById("bg-music");
+const overlay=document.getElementById("start-overlay");
+const btnYes=overlay.querySelector(".yes");
+const btnNo=overlay.querySelector(".no");
+const sections=document.querySelectorAll("section");
+const btn=document.querySelector(".next-btn");
+let i=0;
+
+// START BUTTONS
+btnYes.addEventListener("click",()=>{
+  overlay.style.display="none";
+  sections[0].classList.add("active");
+  audio.play().catch(()=>{});
+  createHearts(sections[0],3);
+});
+
+btnNo.addEventListener("click",()=>{
+  overlay.innerHTML="<h1>Phir shayad kabhi 💔</h1>";
+});
+
+// NEXT BUTTON LOGIC
+btn.onclick = () => {
+  sections[i].classList.remove("active");
+  i++;
+  if(i < sections.length){
+    sections[i].classList.add("active");
+    window.scrollTo(0,0);
+    createHearts(sections[i],3);
+  }
+  if(i === sections.length){ // last page
+    btn.disabled = true;
+    btn.style.opacity = "0.5";
+  }
+};
+
+// EMOJI RAIN
+function createEmojiRain(containerId,emoji,count=10){
+  const container=document.getElementById(containerId);
+  for(let j=0;j<count;j++){
+    const span=document.createElement("span");
+    span.innerText=emoji;
+    span.style.left=Math.random()*100+"%";
+    span.style.fontSize=(18+Math.random()*14)+"px";
+    span.style.opacity=0.3+Math.random()*0.3;
+    const dir=["rainDown","rainUp","rainTLBR","rainTRBL"];
+    span.style.animationName=dir[Math.floor(Math.random()*dir.length)];
+    span.style.animationDuration=(10+Math.random()*8)+"s";
+    container.appendChild(span);
+  }
+}
+for(let j=1;j<=12;j++){ createEmojiRain("emoji-s"+j,"🧸",10); }
+
+// HEARTS
+function createHearts(section,count){
+  for(let k=0;k<count;k++){
+    const heart=document.createElement("div");
+    heart.classList.add("heart");
+    heart.style.left=Math.random()*90+"%";
+    heart.style.fontSize=(20+Math.random()*20)+"px";
+    heart.innerText="💖";
+    section.appendChild(heart);
+    setTimeout(()=>{heart.remove();},4000);
+  }
+}
+</script>
+</body>
+</html>
